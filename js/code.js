@@ -13,7 +13,7 @@ async function getData(pram) {
 if(!pram){pram="cairo"; previous=pram}
 
 
-  const url=`http://api.weatherapi.com/v1/forecast.json?key=f297823f21354f43b40225843250407&q=${pram}&days=3&aqi=no&alerts=no`
+  const url=`https://api.weatherapi.com/v1/forecast.json?key=f297823f21354f43b40225843250407&q=${pram}&days=3&aqi=no&alerts=no`
   let Data=await fetch(url)
   let res=await Data.json()
   if(res.error){getData(previous)}else{
