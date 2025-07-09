@@ -110,7 +110,7 @@ async function getLocation() {
     const url='https://api.ipgeolocation.io/v2/ipgeo?apiKey=8192389f37f54490b8cab7db18754fa1'
     let Data=fetch(url).then(async (data)=>{
       let res=await data.json()
-      console.log(res.location.city)
+      
       if(res.location.city){
         getData(res.location.city)
       }else{
